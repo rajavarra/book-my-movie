@@ -133,14 +133,6 @@ const Seats = sequelize.define(
   }
 );
 
-// CREATE TABLE Seats (
-//     SeatID INT PRIMARY KEY,
-//     ShowID INT, -- Foreign Key referencing the Show table
-//     RowNumber INT,
-//     SeatNumber INT,
-//     Status VARCHAR(20) DEFAULT 'Available' -- Status can be 'Available', 'Booked', etc.
-// );
-
 Shows.belongsTo(Theatre, { foreignKey: 'theatre_id' });
 
 Shows.belongsTo(Movie, { foreignKey: 'movie_id' });
